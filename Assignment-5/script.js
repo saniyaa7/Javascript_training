@@ -16,9 +16,9 @@ Or if you pass a negative index? Try it out.
 javascript will return undefined if access index is negative or beyond the range
 */
 
-const arr=[1,2,3];
-console.log(arr[1000]); //  ==> undefine
-console.log(arr[-1]); // ==>undefine
+const a1=[1,2,3];
+console.log(a1[1000]); //  ==> undefine
+console.log(a1[-1]); // ==>undefine
 
 /*3.Do you think JSON.stringify would work for arrays as well? What about nested objects? 
 //What happens if we pass numbers, strings, undefined, null to JSON.stringify?
@@ -27,7 +27,7 @@ console.log(arr[-1]); // ==>undefine
 it will also stringify the nested objects
 */
 
-// const arr = [10,20,30];
+ const arr = [10,20,30];
 console.log(JSON.stringify(arr))
 console.log(JSON.stringify({ x: 5, y: 6 })); 
 const obj={a:1,b:2,c:{c1:3.1,c2:3.2}}
@@ -44,7 +44,7 @@ What will happen if such an invalid function runs in the program? Will other par
 ==> When we pass invalid value to JSON.parse() it will throw error "not defined"
 it will not execute the further code
 */
-const obj1 = JSON.parse(josh); // it will throw an error
+const obj1 = JSON.parse(Saniya); // it will throw an error
 console.log(typeof obj1)
 
 
