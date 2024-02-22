@@ -23,8 +23,12 @@ function callbackFunc(){
   return 5;
  }
 
- //test(callbackFunc); // ==> function is passed as an argument
- //test(callbackFunc()); // ==> return value of callbackFunc() is passed as an argument
+ test(callbackFunc); // ==> function is passed as an argument
+                    //output: Calling the callback function
+                
+ test(callbackFunc()); // ==> return value of callbackFunc() that is 5 is passed as an argument in test which gives the Error
+                      //output: TypeError: callback is not a function
+
 test(()=>callbackFunc()); //==> argument will be passed as an anonymous function and will be called within the test function 
 
 // What happens when you return callback() from the test function?
