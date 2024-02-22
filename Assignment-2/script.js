@@ -1,27 +1,27 @@
 //1. Declare a variable - let a;. On another line assign any value you like to a. Log the value of a before and after assignment. Try doing the same with const
-let a 
-console.log(a);
-a=10
-console.log(a);
+let a ;
+console.log(a);//a=undefined
+a=10;
+console.log(a);//a=10
 
-// const b  // cannot define without initilizing
-// b=10
-// console.log(a);
+const b ; // cannot define without initilizing
+b=10;
+console.log(b); //SyntaxError: Missing initializer in const declaration
 
 //2.Use the typeof operator to find the types of different variables. Specially note what the typeof operator returns for arrays, null values and NaN. 
 
 let name="Saniya"
-console.log("type of name: ",typeof name);
+console.log("type of name: ",typeof name); //string
 let y=true
-console.log("type of y: ",typeof y);
+console.log("type of y: ",typeof y); //boolean
 let z=23.23
-console.log("type of z: ",typeof z);
+console.log("type of z: ",typeof z); //number
 let ar=[1,"first",true]
-console.log("type of array: ",typeof ar);
+console.log("type of array: ",typeof ar); //object
 let null_element=null
-console.log("type of null_element: ",typeof null_element);
+console.log("type of null_element: ",typeof null_element);//object
 let p=NaN
-console.log("type of NaN",typeof p);
+console.log("type of NaN",typeof p);//number
 
 //3. How can you find if a variable is an array or NaN besides typeof?
 let str = 'This is a string';
@@ -29,13 +29,13 @@ let str = 'This is a string';
     let arr = [10, 20, 30, 40];
  
     let ans = Array.isArray(str);
-    console.log("Output for String: " + ans);
+    console.log("Output for String: " + ans); //false
  
     ans = Array.isArray(num);
-    console.log("Output for Number: " + ans);
+    console.log("Output for Number: " + ans); //false
  
     ans = Array.isArray(arr);
-    console.log("Output for Array: " + ans);
+    console.log("Output for Array: " + ans); //true
 
 //4. Use let and const to create arrays and objects. Try modifying, deleting properties within the array or object. What do you expect to happen in both cases?
 
