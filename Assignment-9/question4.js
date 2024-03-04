@@ -1,3 +1,5 @@
+//Create a blog list page that fetches a list of users from a mock API and adds them to a table on the page after loading. 
+//Add a button to sort the users by name. Add an input to filter the table by search. (Optional: Show “Loading…” or a loading spinner on the screen till the data loads)
 async function fetchData(){
   const url = "https://dummyjson.com/users"
   try {
