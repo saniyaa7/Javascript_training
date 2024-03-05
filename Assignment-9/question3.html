@@ -1,0 +1,57 @@
+<!-- Create a form to submit a blog to a mock API (reqres.in) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youva-Writer | myblog</title>
+  </head>
+  <body>
+    <form id="myBlog">
+      <center>
+        <h2>Youva Writer | yourblog</h2>
+        <label for="title">Title:</label><br />
+        <input type="text" id="title" name="title" /><br /><br />
+        <label for="author">Author:</label><br />
+        <input type="text" id="author" name="author" /><br /><br />
+        <label for="content">Content:</label><br />
+        <textarea id="content" name="content"></textarea><br /><br />
+        <input type="submit" value="Submit" />
+      </center>
+    </form>
+
+    <script>
+      var dom = document.getElementById("myBlog");
+      dom.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+        var blogData = {};
+
+        formData.forEach(function (value, key) {
+          blogData[key] = value;
+        });
+
+        fetch("https://reqres.in/api/blog", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(blogData),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            alert("Blog post submitted successfully!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert(
+              "Error, while submitting the blog post. Plz, try again later !!"
+            );
+          });
+      });
+    </script>
+  </body>
+</html>
